@@ -1,17 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <j-browse :assembly="assembly" :tracks="tracks"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import assembly from '../src/assembly'
+import tracks from '../src/tracks'
+import JBrowse from './components/JBrowse.vue'
 export default {
   name: 'App',
+  data(){
+    return {
+      assembly:assembly,
+      tracks:tracks
+    }
+  },
   components: {
-    HelloWorld
+    JBrowse
   }
 }
 </script>
